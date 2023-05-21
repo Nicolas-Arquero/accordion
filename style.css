@@ -1,0 +1,35 @@
+.accordion {
+  background-color: #f5f5f5;
+  color: #333;
+  cursor: pointer;
+  padding: 10px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  transition: 0.4s;
+}
+
+.accordion:hover {
+  background-color: #ddd;
+}
+
+.accordion::after {
+  content: '\002B'; /* Ajoute une flèche vers le bas */
+  color: #777;
+  float: right;
+  font-weight: bold;
+  margin-left: 5px;
+}
+
+.active::after {
+  content: "\2212"; /* Change la flèche vers le haut lorsque l'accordéon est ouvert */
+}
+
+.panel {
+  padding: 0 10px;
+  background-color: white;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
